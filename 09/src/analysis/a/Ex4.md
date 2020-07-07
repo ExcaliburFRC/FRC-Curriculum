@@ -18,7 +18,7 @@ public static int avg(Set<Integer> numbers) {
 If `numbers` is empty, the `foreach` loop doesn't execute, leaving `count` and `sum` as `0`.
 Thus, when we reach the `return` statement, we have `return 0 / 0`, 
 throwing an `ArithmeticException` because dividing by `0` isn't defined. 
-#### The Solution
+#### The fix
 We need to prevent reaching the final return statement if `count = 0`. 
 There are at least two ways to do that. 
 Adding one of these before the problematic `return` fixes the problem. 
