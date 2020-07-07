@@ -12,8 +12,7 @@ public class Ex3 {
 
   private static <T> void compareInsert(Comparator<T> comparator, List<T> list, T object) {
     for (int i = 0; i < list.size(); i++) {
-      int compareResult = comparator.compare(object, list.get(i));
-      if(compareResult > 0) {
+      if(comparator.compare(object, list.get(i)) > 0) {
         pushbackInsert(list, object, i);
         return;
       }

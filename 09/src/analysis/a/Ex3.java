@@ -4,20 +4,15 @@ import java.util.*;
 
 public class Ex3 {
   /**
-   * Transforms a Set to a List ordered by the given comparator
+   * Pushes the list down from a certain index, inserting an object at that index
    */
-  public static <T> List<T> setToOrderedList(Comparator<T> comparator, Set<T> set) {
-    List<T> list = new ArrayList<>(set.size());
-    boolean isFirst = true;
-    for (T object : set) {
-      if(isFirst) {
-        list.add(0, object);
-        isFirst = false;
-      } else {
-        compareInsert(comparator, list, object);
-      }
+  private static <T> void pushbackInsert(List<T> list, T object, int insertIndex) {
+    for (int i = list.size() - 1; i >= insertIndex; i--) {
+      //for each i, move list[i] to list[i+1]
+      list.set(i + 1, list.get(i));
     }
-    return list;
+    //put the value to insert in the "hole" left after pushback
+    list.set(insertIndex, object);
   }
 
   /**
@@ -25,22 +20,33 @@ public class Ex3 {
    */
   private static <T> void compareInsert(Comparator<T> comparator, List<T> list, T object) {
     for (int i = 0; i < list.size(); i++) {
-      int compareResult = comparator.compare(object, list.get(i));
-      if(compareResult > 0) {
+      //if object > other, than object should be before other
+      if (comparator.compare(object, list.get(i)) > 0) {
+        //insert in correct place while pushing down everything else
         pushbackInsert(list, object, i);
-        return;
+        return;//after inserting, the function finished its job - we can exit
       }
     }
+    //if we reached the end of the list and didn't insert yet, then add at the end of the list
     list.add(object);
   }
 
+
   /**
-   * Pushes the list down from a certain index, inserting an object at that index
+   * Transforms a Set to a List ordered by the given comparator
    */
-  private static <T> void pushbackInsert(List<T> list, T object, int insertIndex) {
-    for (int i = list.size() - 1; i >= insertIndex; i--) {
-      list.set(i + 1, list.get(i));
+  public static <T> List<T> setToOrderedList(Comparator<T> comparator, Set<T> set) {
+    List<T> list = new ArrayList<>(set.size());
+    boolean isFirst = true;
+    for (T object : set) {
+      //add the first item without fussing, there is nothing to compare to
+      if (isFirst) {
+        list.add(0, object);
+        isFirst = false;
+      } else {
+        compareInsert(comparator, list, object);
+      }
     }
-    list.set(insertIndex, object);
+    return list;
   }
 }

@@ -11,10 +11,15 @@ public class Ex2 {
    *          True     True      True
    */
   public static boolean boolMajority(boolean[] array) {
-    int v1 = 0;
+    int balance = 0;
     for (int i = 0; i < array.length; i++) {
-      v1 += array[i]? 1 : -1;
+      //count in a way that false and true values cancel each other,
+      //meaning that the state of balance points to the majority:
+      // balance > 0 -> true majority
+      // balance > 0 -> false majority
+      // balance = 0 -> equal
+      balance += array[i]? 1 : -1;
     }
-    return v1 >= 0;
+    return balance >= 0;
   }
 }
