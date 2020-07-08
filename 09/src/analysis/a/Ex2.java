@@ -18,7 +18,11 @@ public class Ex2 {
       // balance > 0 -> true majority
       // balance > 0 -> false majority
       // balance = 0 -> equal
-      balance += array[i]? 1 : -1;
+      if (array[i]) {
+        balance += 1;
+      } else {
+        balance += -1;
+      }
     }
     return balance >= 0;
   }
