@@ -11,7 +11,7 @@ Learn about more advanced components and control of them.
 - reading limelight values?
 
 ### Practice
-#### `Limelight.java`
+#### `Limelight` class
 Writing a `Limelight` class alone (subteam without mentor/lead help), 
 while researching the [Limelight docs](https://docs.limelightvision.io/en/latest/)
 
