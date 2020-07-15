@@ -17,6 +17,3 @@ Writing an `Intake` subsystem class with relevant commands/button binds, based o
 ###### Options: 
 - enum for motor mode (OFF, IN, EJECT)
 - button bindings for 
-
-
-##### [Trello](https://trello.com/c/Vyq9qYSH)

@@ -17,4 +17,3 @@ If there is time, advance on next lesson:
 - `DigitalInput`
 - vendordeps?
 
-##### [Trello](https://trello.com/c/BpGb2V1k)
