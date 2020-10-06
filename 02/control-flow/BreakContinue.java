@@ -1,4 +1,4 @@
-public class BreakContinueExample {
+public class BreakContinue {
   public static void main(String[] args) {
     /*
      * This shows the difference between

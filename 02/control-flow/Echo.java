@@ -17,6 +17,7 @@ public class Echo {
                         + exitcode + "` is entered.");
                         
     String currentInput;
+
     // infinite loop, check exitcode inside loop
     while(true) {
       // read the latest input

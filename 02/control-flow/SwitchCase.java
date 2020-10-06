@@ -1,6 +1,6 @@
-public class SwitchCaseExample {
+public class SwitchCase {
   public static void main(String[] args) {
-    int x;
+    int x = 2;
     
     /*
      * A `switch` conditional compares the value (here: x)
