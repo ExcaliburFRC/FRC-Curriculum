@@ -20,3 +20,5 @@ Another example:
 Consumer<String> parameterizedHello = (String name) -> {
     System.out.println("Hello " + name + "!");
 }
+parameterizedHello.accept("Yosi"); // think - what does this print?
+```
