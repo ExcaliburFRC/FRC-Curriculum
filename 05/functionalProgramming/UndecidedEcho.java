@@ -1,8 +1,8 @@
+package functionalProgramming;
 import java.util.Scanner;
 import java.util.function.Function;
 
 public class UndecidedEcho {
-
   public static void main(String[] args) {
     final Scanner input = new Scanner(System.in);
     System.out.println(""); // greeting

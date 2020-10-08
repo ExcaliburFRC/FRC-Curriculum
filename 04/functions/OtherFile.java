@@ -1,3 +1,5 @@
+package functions;
+
 public class OtherFile {
   public static void sayHello() {
     System.out.println("Hello World!");

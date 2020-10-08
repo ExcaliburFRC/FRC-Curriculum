@@ -1,3 +1,5 @@
+package functionalProgramming.old;
+
 import java.util.function.*;
 public class FP {
     void hello() {
