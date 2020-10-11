@@ -3,6 +3,9 @@ package git;
 import java.util.Scanner;
 import java.util.function.*;
 
+/**
+ * All kinds of tricks with lambdas
+ */
 public class LambdaTricks {
   public static <T> Runnable combine(Supplier<T> supplier, Consumer<T> consumer) {
     return () -> {
