@@ -1,5 +1,5 @@
 package classes;
-
+import java.util.function.Consumer;
 public class Message {
   private String message; // a private object property/field
   
