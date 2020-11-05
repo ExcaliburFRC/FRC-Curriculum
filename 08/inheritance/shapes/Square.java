@@ -5,5 +5,10 @@ public class Square extends Rectangle {
     super(side, side);
   }
 
+  @Override
+  public double area() {
+    return height * height;
+  }
+
   public int x() { return 0;}
 }

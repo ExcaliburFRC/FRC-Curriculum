@@ -1,12 +1,21 @@
 package inheritance.shapes;
 
 public class Rectangle implements Shape {
-  private double height;
+  protected double height;
   private double length;
 
   public Rectangle (double height, double length) {
     this.height = height;
     this.length = length;
+  }
+
+  @Override
+  public boolean equals (Object obj) {
+    if (!(obj instanceof Rectangle)) {
+      return false;
+    }
+    Rectangle other = (Rectangle) obj;
+    return (other.height == this.height) && (other.length == this.length);
   }
 
   @Override
