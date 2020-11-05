@@ -26,3 +26,6 @@ Some examples:
   - what fields/properties and functions/methods would this class probably have?
   - how can that be clearer?
 - and endless other examples...
+
+## And the same goes for commit and pull request messages!!!
+![xkcd](https://imgs.xkcd.com/comics/git_commit.png)
