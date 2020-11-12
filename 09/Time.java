@@ -23,7 +23,7 @@ public class Time {
         Time other = (Time) obj;
         return (other.hours == this.hours) && (other.minutes == this.minutes);
     }
-
+    @Override
     public String toString() {
         return String.format("%d : %d", hours, minutes);
     }
