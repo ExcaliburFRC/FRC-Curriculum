@@ -44,7 +44,6 @@ public class Time {
         Random rand = new Random();
         int randomHour = rand.nextInt(25);
         int randomMinutes = rand.nextInt(61);
-        Object randomTime = new Time(randomHour, randomMinutes);
-        return randomTime;
+        return new Time(randomHour, randomMinutes);
     }
 }
