@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Time {
     private int hours;
     private int minutes;
@@ -15,6 +17,14 @@ public class Time {
         }
     }
 
+    public int getHours() {
+        return hours;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Time)) {
@@ -23,8 +33,18 @@ public class Time {
         Time other = (Time) obj;
         return (other.hours == this.hours) && (other.minutes == this.minutes);
     }
+
     @Override
     public String toString() {
         return String.format("%d : %d", hours, minutes);
+
+    }
+
+    public Object Randomtime() {
+        Random rand = new Random();
+        int randomHour = rand.nextInt(25);
+        int randomMinutes = rand.nextInt(61);
+        Object randomTime = new Time(randomHour, randomMinutes);
+        return randomTime;
     }
 }
