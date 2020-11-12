@@ -25,6 +25,6 @@ public class Time {
     }
 
     public String toString() {
-        return String.format("%s : %s", hours, minutes);
+        return String.format("%d : %d", hours, minutes);
     }
 }
