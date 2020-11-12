@@ -40,7 +40,7 @@ public class Time {
 
     }
 
-    public Object Randomtime() {
+    public static Time Random() {
         Random rand = new Random();
         int randomHour = rand.nextInt(25);
         int randomMinutes = rand.nextInt(61);
