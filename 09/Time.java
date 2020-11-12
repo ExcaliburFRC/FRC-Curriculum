@@ -16,11 +16,15 @@ public class Time {
     }
 
     @Override
-    public boolean equals (Object obj) {
+    public boolean equals(Object obj) {
         if (!(obj instanceof Time)) {
             return false;
         }
         Time other = (Time) obj;
         return (other.hours == this.hours) && (other.minutes == this.minutes);
+    }
+
+    public String toString() {
+        return String.format("%s : %s", hours.toString, minutes.toString);
     }
 }
