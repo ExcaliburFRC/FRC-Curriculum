@@ -45,4 +45,16 @@ public class Time {
         int randomMinutes = rand.nextInt(61);
         return new Time(randomHour, randomMinutes);
     }
+
+    public boolean isBefore(Time other) {
+        if (hours < other.hours) {
+            return true;
+        } else if ((hours > other.hours)) {
+            return false;
+        } else if (minutes < other.minutes) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
