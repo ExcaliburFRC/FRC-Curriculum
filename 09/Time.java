@@ -46,6 +46,20 @@ public class Time {
         return new Time(randomHour, randomMinutes);
     }
 
+    public Time plus(Time other) {
+        int newHour = this.hours + other.hours;
+        int newMinuets = this.minutes + other.minutes;
+        if (newMinuets <= 60) {
+            newMinuets -= 60;
+            newHour += 1;
+
+        }
+        if (newHour <= 24) {
+            newHour -= 24;
+        }
+        return new Time(newHour, newMinuets);
+    }
+
     public boolean isBefore(Time other) {
         if (hours < other.hours) {
             return true;
