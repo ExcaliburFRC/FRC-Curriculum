@@ -37,7 +37,6 @@ public class Time {
     @Override
     public String toString() {
         return String.format("%d : %d", hours, minutes);
-
     }
 
     public static Time Random() {
