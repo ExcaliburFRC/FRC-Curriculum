@@ -54,7 +54,7 @@ public class Time {
             newHour += 1;
 
         }
-        if (newHour <= 24) {
+        if (newHour >= 24) {
             newHour -= 24;
         }
         return new Time(newHour, newMinuets);
