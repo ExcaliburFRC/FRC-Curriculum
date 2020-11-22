@@ -49,7 +49,7 @@ public class Time {
     public Time plus(Time other) {
         int newHour = this.hours + other.hours;
         int newMinuets = this.minutes + other.minutes;
-        if (newMinuets <= 60) {
+        if (newMinuets >= 60) {
             newMinuets -= 60;
             newHour += 1;
 
