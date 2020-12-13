@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: cd $GITHUB_WORKSPACE/13/Pre2021
+      - run: cd $GITHUB_WORKSPACE/13/Pre2021
       - name: Make ./gradlew executable
         run: chmod +x ./gradlew
       - name: Run
