@@ -2,6 +2,10 @@
 
 name: Spotless
 
+
+defaults:
+  run:
+    working-directory: ./13/Pre2021/
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
@@ -21,7 +25,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - run: |
-        cd $GITHUB_WORKSPACE/13/Pre2021
-        chmod +x ./gradlew
-        ./gradlew spotlessCheck
+      - name: Make ./gradlew executable
+        run: chmod +x ./gradlew
+      - name: Run
+        run: ./gradlew spotlessCheck
