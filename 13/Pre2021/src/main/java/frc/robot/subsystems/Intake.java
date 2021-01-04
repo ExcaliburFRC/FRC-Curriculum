@@ -14,5 +14,10 @@ public class Intake extends SubsystemBase {
     public void up() {
         piston.set(DoubleSolenoid.Value.kForward);
         motor.set(0);
+
+    }
+    public void down(){
+        piston.set(DoubleSolenoid.Value.kReverse);
+        motor.set(0);
     }
 }
