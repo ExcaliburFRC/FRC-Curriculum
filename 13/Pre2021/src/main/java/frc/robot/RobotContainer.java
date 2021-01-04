@@ -39,11 +39,23 @@ public class RobotContainer {
    * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
-    Joystick joystickUp = new Joystick(0);
-    new JoystickButton(joystickUp, 1)
+    Joystick joystick1 = new Joystick(0);
+    new JoystickButton(joystick1, 1)
         .whenPressed(
             () -> {
               intake.up();
+            },
+            intake);
+
+    new JoystickButton(joystick1, 3)
+        .whenPressed(
+            () -> {
+              intake.setSpeed(0.5);
+            },
+            intake)
+        .whenReleased(
+            () -> {
+              intake.setSpeed(0);
             },
             intake);
   }

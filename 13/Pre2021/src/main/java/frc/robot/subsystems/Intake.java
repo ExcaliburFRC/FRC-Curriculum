@@ -6,16 +6,21 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Intake extends SubsystemBase {
-  DoubleSolenoid piston = new DoubleSolenoid(0, 1);
-  CANSparkMax motor = new CANSparkMax(0, CANSparkMaxLowLevel.MotorType.kBrushless);
+    DoubleSolenoid piston = new DoubleSolenoid(0, 1);
+    CANSparkMax motor = new CANSparkMax(0, CANSparkMaxLowLevel.MotorType.kBrushless);
 
-  public void up() {
-    piston.set(DoubleSolenoid.Value.kForward);
-    motor.set(0);
-  }
+    public void up() {
+        piston.set(DoubleSolenoid.Value.kForward);
+        motor.set(0);
+    }
 
-  public void down() {
-    piston.set(DoubleSolenoid.Value.kReverse);
-    motor.set(0);
-  }
+    public void down() {
+        piston.set(DoubleSolenoid.Value.kReverse);
+    }
+
+    public void setSpeed(double speed) {
+        if (piston.get() == DoubleSolenoid.Value.kReverse) {
+            motor.set(speed);
+        }
+    }
 }
