@@ -23,11 +23,8 @@ import frc.robot.subsystems.Intake;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here with `public final` ...
-  public final Drive driveTrain = new Drive() ;
-  public final Intake intake = new Intake() ;
-
-
-
+  public final Drive driveTrain = new Drive();
+  public final Intake intake = new Intake();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -44,17 +41,12 @@ public class RobotContainer {
   private void configureButtonBindings() {
     Joystick joystickUp = new Joystick(0);
     new JoystickButton(joystickUp, 1)
-            .whenPressed(()->{
-              intake. up();
-            }, intake);
-    Joystick joystickDown = new Joystick(1);
-    new JoystickButton(joystickDown, 2)
-            .whenPressed(()->{
-              intake.down();
-            }, intake);
-
+        .whenPressed(
+            () -> {
+              intake.up();
+            },
+            intake);
   }
-
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
